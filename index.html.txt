@@ -1,0 +1,135 @@
+index.html 
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <style>
+    /* Um toque leve de estilo para o formulário não ficar cru */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+    }
+    h1#title {
+      text-align: center;
+    }
+    p#description {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form#survey-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .inline-group input {
+      width: auto;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .inline-group label {
+      display: inline;
+      font-weight: normal;
+    }
+    button#submit {
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button#submit:hover {
+      background-color: #218838;
+    }
+  </style>
+</head> 
+ 
+  <body>
+    <h1 id="title">Tech Career Survey</h1>
+    <p id="description">Help us improve our remote work curriculum</p>
+    <form id="survey-form">
+      <div><label id="name-label" for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    </div>
+
+    <!-- Regras 10, 12, 13, 20, 23, 26, 29: Email (descendente do form) -->
+    <div>
+      <label id="email-label" for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    </div>
+
+    <!-- Regras 14, 15, 16, 17, 18, 21, 24, 27, 30: Number com min/max (descendente do form) -->
+    <div>
+      <label id="number-label" for="number">Age</label>
+      <input type="number" id="number" name="age" min="18" max="100" placeholder="Enter your age" />
+    </div>
+
+    <!-- Regras 31, 32, 33: Select dropdown com opções (descendente do form) -->
+    <div>
+      <label for="dropdown">Current Role</label>
+      <select id="dropdown" name="role">
+        <option disabled selected value>Select an option</option>
+        <option value="student">Student</option>
+        <option value="professional">Professional</option>
+      </select>
+    </div>
+
+    <!-- Regras 34, 35, 36, 37, 38: Radio buttons com name, value e descendentes do form -->
+    <div>
+      <label>Do you like this course?</label>
+      <input type="radio" id="yes" name="opinion" value="yes" />
+      <label for="yes">Yes</label>
+      
+      <input type="radio" id="no" name="opinion" value="no" />
+      <label for="no">No</label>
+    </div>
+
+    <!-- Regras 39, 40: Checkboxes com value e descendentes do form -->
+    <div>
+      <label>What to improve?</label>
+      <input type="checkbox" id="frontend" name="preference" value="frontend" />
+      <label for="frontend">Frontend</label>
+
+      <input type="checkbox" id="backend" name="preference" value="backend" />
+      <label for="backend">Backend</label>
+    </div>
+
+    <!-- Regra 41: Textarea descendente do form -->
+    <div>
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments"></textarea>
+    </div>
+
+    <!-- Regras 42, 43, 44: Botão de submit com id e type correctos, descendente do form -->
+    <button type="submit" id="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
+        
+ 
